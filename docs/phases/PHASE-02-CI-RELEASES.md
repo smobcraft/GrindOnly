@@ -1,6 +1,6 @@
 # Phase 02 — CI and releases
 
-Status: implementation prepared locally; GitHub execution and publication pending.
+Status: implementation is present in the live checkout. The maintainer reports that GitHub Actions validation and release workflows previously ran successfully. Independent session verification of hosted workflow execution, branch protection, release artifacts and in-game behavior remains pending.
 
 1. Extract repository update into existing checkout, preserving .git. Review git diff and push to master.
 2. Open Actions > Validate and package. Confirm all steps pass; download the test artifact and extract its inner GrindOnly.zip. Test in WoW Forever, preserving SavedVariables.
