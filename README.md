@@ -18,7 +18,7 @@ For upgrades, close the game and replace only the addon folder. Keep `WTF/Accoun
 
 | Feature | How to use |
 | --- | --- |
-| Live dashboard | `/wgf show`; drag/resize the panel. Rolling 15-minute gold and XP rates, session totals, buff status and efficiency. |
+| Live dashboard | Left-click the Grind Only minimap icon to toggle the dashboard, or type `/wgf show`; drag/resize the panel. Rolling 15-minute gold and XP rates, session totals, buff status and efficiency. |
 | Overview | `/wgf stats` → Overview for session history. |
 | Mobs | Stats → Mobs; select a row for observed kills, earnings and attributed drops. |
 | Loot | Stats → Loot; select an item for recorded sources; hover for native item tooltip. |
