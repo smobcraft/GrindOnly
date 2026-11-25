@@ -29,6 +29,7 @@ Slices 03B.1 through 03B.7 are implemented and covered by the final mocked suite
 - Pre-create the `ai-ready` GitHub label with repository-approved color/description; the bot does not create labels.
 - SQLite location and operational backup policy.
 - Image links point to Discord CDN rather than durable storage; expiry is accepted for the current scope.
+- Branch-protection settings and in-game regression remain outside Phase 03 implementation and need separate verification.
 - GitHub release polling permissions and fine-grained token scope.
 - Verify Discord bot access to the configured update channel, or retain feedback-channel fallback.
 - Delivery is at-least-once across crashes; a Discord-accepted message whose local acknowledgement is interrupted may be sent again.
