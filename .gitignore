@@ -12,3 +12,5 @@ dist/
 *.zip
 .DS_Store
 Thumbs.db
+
+!tools/discord-bot/.env.example
