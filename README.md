@@ -19,7 +19,7 @@ Track your gold and XP in real time, compare farming locations, discover mob dro
 ## Installation
 
 1. Close WoW Forever.
-2. Download the addon release ZIP (GitHub Releases will be configured in Phase 02). For this repository snapshot, use the inner `GrindOnly` folder directly.
+2. Download [GrindOnly.zip from the latest release](https://github.com/smobcraft/GrindOnly/releases/latest/download/GrindOnly.zip) once the first stable release is published. For this repository snapshot, use the inner `GrindOnly` folder directly.
 3. Copy that folder into `World of Warcraft/_forever_/Interface/AddOns/` so `AddOns/GrindOnly/GrindOnly.toc` exists. Do not nest it twice.
 4. For database features, download [ForeverDB by Fatedfr](https://www.curseforge.com/wow/addons/forever-db) separately. Extract its supplied addon folders into the same AddOns directory; enable ForeverDB on the character selection AddOns screen. The inspected reference version is 2026.11.23.41. The core tracker does not require it.
 5. Restart WoW, enable Grind Only, log in and left-click the Grind Only coin icon on your minimap (or type `/wgf show`) to open the dashboard. Right-click the icon or type `/wgf stats` for analytics.

@@ -1,0 +1,26 @@
+name: Validate and package
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install Lua 5.1
+        run: sudo apt-get update && sudo apt-get install -y lua5.1
+      - run: python3 tools/validate.py
+      - run: lua5.1 tests/prediction.lua
+      - run: python3 tools/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GrindOnly-test-build
+          path: dist/GrindOnly.zip
+          if-no-files-found: error
