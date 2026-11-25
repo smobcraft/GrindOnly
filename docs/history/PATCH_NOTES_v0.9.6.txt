@@ -1,0 +1,1 @@
+Fix: the legacy buff update code was resizing the minimal panel back to 250px every refresh. It now uses a consistent 194px height, leaving only a small margin below the buffs row. No analytics or SavedVariables changes.

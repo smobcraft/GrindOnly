@@ -1,0 +1,1 @@
+Critical startup fix: Design B UI was previously declared in the main Lua chunk, exceeding Lua 200-local limit. Scoped all new UI variables inside a do/end block, with a single update callback exposed. Moved UI initialization after existing efficiency and buff widgets so all referenced frames exist. Minimap right-click Stats retained. No SavedVariables changes.

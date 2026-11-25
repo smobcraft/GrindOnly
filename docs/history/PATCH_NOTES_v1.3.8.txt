@@ -1,0 +1,7 @@
+Grind Only v1.3.8 - Notable Loot Tooltip Toggle
+
+/goatlas tooltip on - enable unified mob loot tooltip
+/goatlas tooltip off - disable and restore Blizzard tooltip
+/goatlas tooltip toggle (or /goatlas tooltip) - toggle state
+
+Preference persists in GrindOnlyDB.mobAtlasSettings.notableTooltipEnabled across sessions. Loot data cache is unchanged.

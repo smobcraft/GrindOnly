@@ -1,0 +1,1 @@
+v0.8.3: Spots groups all subzones into one zone-level entry, filters locations with zero observed kills, computes weighted gold/hour from total money and total time, and adds combined zone drilldown. Existing history is unchanged.

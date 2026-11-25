@@ -1,0 +1,1 @@
+Fixed navigation button clipping and legacy green buff-status text flashing. Buff chips and tracking remain functional. No SavedVariables changes.

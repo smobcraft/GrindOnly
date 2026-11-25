@@ -1,0 +1,1 @@
+Remove restricted UnitHealth comparison in tooltip update. Guard unit metadata and death flags; fall back to native tooltip when unavailable. Preserve compact fixed position and toggle.

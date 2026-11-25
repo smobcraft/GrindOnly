@@ -1,0 +1,1 @@
+Grind Only v0.7.5: high-visibility efficiency trend banner. Green=improving, amber=steady, red=slowing, blue=building baseline. Compared rolling 5-minute vs 30-minute kills/hour. No new game events or SavedVariables migrations.

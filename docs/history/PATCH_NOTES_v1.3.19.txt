@@ -1,0 +1,1 @@
+Mob-specific solo XP estimates using live levels, elite classification and remaining rested pool; historical kill throughput retained. Formula provisional for Forever; no observed per-kill attribution yet.

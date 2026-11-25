@@ -1,0 +1,1 @@
+Grind Only v0.7.4: Compact-only Efficiency panel. Removed Expand/Compact button and saved expanded preference usage. Independent dragging and saved position remain. Existing SavedVariables and history are preserved.

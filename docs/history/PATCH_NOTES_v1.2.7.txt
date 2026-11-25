@@ -1,0 +1,7 @@
+Grind Only v1.2.7 - Mob Atlas map density fix
+- Replace arbitrary first-180 spawn pins with spatial clusters across the entire map.
+- Each cluster displays the number of distinct mob types.
+- Hover for mob names/levels; click for loot; Shift-click to cycle mobs in a cluster.
+- Use solid colored textures to avoid missing/low-visibility icon atlas assets.
+- Existing personal tracking, map filters, and ForeverDB lookup unchanged.
+- In-game testing still required.

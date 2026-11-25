@@ -1,0 +1,1 @@
+Resizable compact dashboard: drag bottom-right gold grip to adjust width (310-580px). Horizontal separators, session gold column and buff text adjust automatically. Width saved in GrindOnlyDB.uiWidth and restored on login. Fixed height 194px. Removes old layout height resets.

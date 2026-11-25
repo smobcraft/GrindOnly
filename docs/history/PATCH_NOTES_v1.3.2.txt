@@ -1,0 +1,1 @@
+v1.3.2: Replace unsupported GameTooltip OnTooltipSetUnit HookScript with throttled OnUpdate + OnHide hooks. Prevent duplicate loot lines for the same unit tooltip. No data changes.

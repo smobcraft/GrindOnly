@@ -1,0 +1,1 @@
+v1.2.1: Classic/Forever map API compatibility fallback, visible diagnostics, /goatlas debug, overlay checkbox frame level. In-game compatibility still requires testing against installed ForeverDB.

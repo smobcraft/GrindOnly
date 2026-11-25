@@ -1,0 +1,11 @@
+Grind Only v1.3.0 - Modern Tactical Dashboard (phase 1)
+
+- Added reusable TacticalUI.lua design primitives: font labels, textured surfaces, rules, metric cards.
+- Bundled three WoW-compatible uncompressed RGBA TGA textures in Media/.
+- Rebuilt live dashboard presentation with 4 metric cards, efficiency score and status, buff card.
+- Kept underlying GrindOnly.lua tracking, history, and MobAtlas behavior unchanged.
+- Preserved dragging, resize grip, saved position and size; increased minimum dashboard height to 285.
+- Added read-only presentation bridge from existing dashboard values.
+- Future phases: restyle Mob Atlas and History using the shared TacticalUI primitives.
+
+In-game appearance and client compatibility are not yet verified.

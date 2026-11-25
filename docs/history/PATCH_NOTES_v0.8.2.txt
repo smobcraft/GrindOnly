@@ -1,0 +1,1 @@
+v0.8.2: Moved the four dashboard buttons to a dedicated, evenly spaced row below the heading. Shifted the gold and buff sections downward to prevent overlap. Adjusted panel dynamic heights. No SavedVariables changes.

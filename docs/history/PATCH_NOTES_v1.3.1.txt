@@ -1,0 +1,1 @@
+v1.3.1: Notable loot tooltips for world-map single-mob clusters and in-world unit tooltips. Up to five noteworthy drops with ForeverDB chance; conservative ambiguous-NPC handling; lazy per-NPC caching. No SavedVariables migration.

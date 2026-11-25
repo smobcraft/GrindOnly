@@ -1,0 +1,4 @@
+Grind Only 0.7.10 dungeon stability fix.
+Guards against WoW secret GUID/name/level/boolean values before indexing mob tracking tables.
+A protected target poller disables itself after an unexpected exception instead of spamming Lua errors.
+All saved history and existing UI features retained.

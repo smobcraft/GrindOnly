@@ -1,0 +1,14 @@
+Grind Only v1.0.0 — history foundations and level-aware scoring
+- Migrate SavedVariables to schema 4 without clearing older history.
+- Stop discarding session summaries after 100 sessions.
+- Collect 5-minute coin/vendor/XP observations with level and zone/subzone.
+- Cap detailed time buckets at 12,000 (roughly 1,000 hours of observed buckets).
+- Use weighted median historical rates for sessions within 3 character levels.
+- Require at least 3 comparable historical sessions before showing a calibrated score.
+- Stabilize short-session scores toward 5 for the first 30 minutes.
+- Show BUILDING HISTORY when comparison data is insufficient.
+- Existing resize, stats, buffs, gold and minimap features retained.
+
+Limitations: No rare-drop adjustment or percentile ranking yet. Existing history
+without time buckets cannot be reconstructed. Session history may grow over time;
+back up WTF/SavedVariables regularly. No automatic data export or upload.

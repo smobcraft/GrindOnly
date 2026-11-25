@@ -1,0 +1,1 @@
+v1.2.2: Restyled Mob Atlas to match the dark navy Grind Only dashboard: gold top accent, subdued typography, compact blue-gray loot rows, clean search field and footer controls. ForeverDB and map pin logic unchanged.

@@ -1,0 +1,10 @@
+Grind Only v1.1.0 - Mob Atlas data collection foundation
+- Store observed mob encounter and kill locations in compact 2% map-grid cells.
+- Track observed level ranges and NPC IDs when available from GUIDs.
+- Keep historical mob summaries instead of deleting all but the newest 400.
+- Track single-recent-corpse loot attribution and unattributed loot separately.
+- Version the mob atlas schema; existing SavedVariables remain in place.
+- Collection runs with dashboard hidden. No world-map UI or export yet.
+- Coordinates represent player position, not precise mob spawn coordinates.
+- Legacy map API fallback may be unavailable on some client builds.
+- Drop rates are NOT calculated without reliable looted-corpse counts.

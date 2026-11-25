@@ -1,0 +1,1 @@
+v1.3.18: Native tooltip forecasts using level-weighted historical session throughput, observed mob loot and ForeverDB. XP is a broad session proxy, not exact mob XP. /goatlas prediction on|off|detail|compact. No data migration.

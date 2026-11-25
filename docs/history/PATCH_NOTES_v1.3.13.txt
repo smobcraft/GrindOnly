@@ -1,0 +1,1 @@
+Zone overview and subzone drill-down; sortable location/gold/XP. XP rates use newly tracked time only; legacy gold/time preserved. No historical XP backfill.

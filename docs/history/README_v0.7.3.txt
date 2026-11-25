@@ -1,0 +1,1 @@
+Grind Only v0.7.3: compact efficiency panel by default; Expand/Compact toggle; saved mode and position. No combat-log events added.\n

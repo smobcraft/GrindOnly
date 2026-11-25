@@ -1,0 +1,1 @@
+Fix: gold and loot collection no longer requires a recently observed corpse. Mob attribution still uses observed corpses when available. Mailbox excluded. Supports long and short currency denominations. Preserves SavedVariables.

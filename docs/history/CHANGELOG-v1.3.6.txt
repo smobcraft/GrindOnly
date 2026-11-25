@@ -1,0 +1,1 @@
+v1.3.6: Unified mob tooltip. Native unit tooltip is visually replaced with one Modern Tactical frame; no native frame repositioning/resizing. Cached notable loot and cursor-following preserved. Non-unit tooltips left alone.

@@ -1,0 +1,9 @@
+Grind Only v1.2.6 - Mob Atlas map filter reset
+
+- Show on Map no longer sets a persistent selected-mob filter.
+- Every fresh opening of the world map clears the transient search filter and displays all mobs.
+- Closing the map resets the previous map ID so markers rebuild on reopening.
+- Explicit /goatlas map also continues to clear the filter.
+- Existing saved grinding history, ForeverDB data and dashboard are unchanged.
+
+Note: A level range explicitly set using /goatlas level remains active.

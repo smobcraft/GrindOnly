@@ -1,0 +1,12 @@
+Grind Only v1.0.1 - mailbox gold tracking fix
+
+Fixes a possible permanent loot/money suppression after visiting a mailbox
+on WoW Forever clients that fail to deliver MAIL_CLOSED consistently.
+
+Checks whether MailFrame is actually visible on each loot or money event,
+clearing a stale mailbox flag once the frame has been closed. Also resets
+mailbox state when entering the world. While mailbox is visibly open,
+mail attachments are still excluded from grinding income.
+
+Includes v1.0.0 history and level-aware scoring improvements.
+SavedVariables are unchanged.

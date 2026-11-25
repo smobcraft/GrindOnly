@@ -1,0 +1,1 @@
+Historical XP estimates from retained metric buckets and session duration. One-time snapshot; direct rates take precedence after 60 seconds. No mixing overlapping data. ~ marks estimates. Missing intervals and zone changes limit accuracy.

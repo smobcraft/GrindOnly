@@ -1,0 +1,1 @@
+Compact 220px tooltip, fixed lower-right anchor, separate drop chance column. Preserves toggle, cache and dead-target handling.

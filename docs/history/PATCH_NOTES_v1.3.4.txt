@@ -1,0 +1,1 @@
+v1.3.4: Use a dedicated Modern Tactical notable-loot tooltip instead of appending to Blizzard GameTooltip. Reposition native unit tooltip near mouse cursor and clamp both tooltip frames to screen bounds. Keep map tooltip logic unchanged.

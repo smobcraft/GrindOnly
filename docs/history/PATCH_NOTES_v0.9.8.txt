@@ -1,0 +1,1 @@
+Two-axis resizing: drag the lower-right handle to change width and height (310-580 x 180-360). Content sections redistribute vertically with height. Saved uiWidth and uiHeight; older saved settings remain compatible.

@@ -1,0 +1,3 @@
+Grind Only v1.2.4 - Mob Atlas panel visibility fix
+
+Replaced unsupported/ineffective RGBA SetTexture calls with WHITE8X8 texture assets tinted using SetVertexColor. Restores dark navy panel background, search field, separators, and loot/navigation row backgrounds on WoW Forever. No changes to database, loot, map, or saved-variable behavior.

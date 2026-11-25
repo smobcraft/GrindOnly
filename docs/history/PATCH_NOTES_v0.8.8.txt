@@ -1,0 +1,1 @@
+Native UI layout rebuild of Design D. Eliminates overflow and old card backgrounds, aligns metrics and chart, shows missing buff names in red chips with tooltips. Built from v0.8.7, preserving v0.8.5 gold tracking and SavedVariables.\n

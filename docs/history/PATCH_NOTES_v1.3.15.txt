@@ -1,0 +1,1 @@
+Native Unit tooltip post-call; no replacement frame, alpha, positioning or per-frame tooltip hook. Cached top five drops; reset on native clear. Toggle takes effect on next rebuild. Unsupported hooks or restricted identity leave native tooltip untouched. History unchanged.

@@ -1,0 +1,1 @@
+Reassert native tooltip alpha while replacement is visible, including cached updates. Restore previous alpha on fallback. Do not hide native tooltip before successful NPC lookup.

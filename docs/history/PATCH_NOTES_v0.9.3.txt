@@ -1,0 +1,1 @@
+Design B compact dashboard. Gold/hour, session gold, overall 1-10 grade, separate gold and XP grades, and named missing buffs. XP captured via UnitXP changes and level-up rollover. Grades compare to previous sessions at same level for XP, otherwise first five minutes; no mob-count scoring. Right-click minimap icon opens Stats. Existing history and buff tracking retained.\n

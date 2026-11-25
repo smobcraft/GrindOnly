@@ -1,0 +1,1 @@
+Unified dashboard: efficiency embedded into one 520x333 panel; compact gold metrics, efficiency trend, 10-minute bar chart, missing-buff indicator with hover details. Efficiency button opens historical Efficiency tab. No SavedVariables changes.

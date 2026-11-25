@@ -1,0 +1,14 @@
+WTF/
+SavedVariables/
+*.lua.bak
+*.log
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+.venv/
+dist/
+*.zip
+.DS_Store
+Thumbs.db

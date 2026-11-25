@@ -1,0 +1,1 @@
+Minimal unified panel 460x250. Prominent gold/hour and efficiency feedback; total gold, session duration, small KPH and target stats; named missing-buff chips. Removed coin/vendor UI only (tracking retained). Detailed charts remain in History > Efficiency. SavedVariables unchanged.\n

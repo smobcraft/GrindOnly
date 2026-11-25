@@ -1,0 +1,1 @@
+v1.3.7 - Compact unified mob tooltip: reduced width to 268px, tightened vertical spacing, smaller font sizes; all five notable loot entries retained. No tracking changes.

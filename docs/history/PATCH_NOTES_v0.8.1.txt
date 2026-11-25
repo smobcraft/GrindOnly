@@ -1,0 +1,1 @@
+v0.8.1: Compact Spots and Buffs buttons added to the main dashboard beside Efficiency and Stats. Both open their respective tabs in the Stats window. No SavedVariables changes.

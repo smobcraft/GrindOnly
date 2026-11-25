@@ -1,0 +1,1 @@
+v1.3.3 - Reflow unit tooltips after injecting notable loot lines. Prevents appended text from appearing outside the tooltip background. No tracking changes.

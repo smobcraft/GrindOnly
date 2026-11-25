@@ -1,0 +1,1 @@
+Fixed legacy efficiency card textures extending beyond embedded panel. Explicitly hide four old backgrounds and labels, remove obsolete footer below dashboard, clip embedded chart where supported, and align column separator. Preserves tracking and saved data.

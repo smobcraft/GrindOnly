@@ -1,0 +1,1 @@
+v1.2.3: Fix Mob Atlas search EditBox:SetFont() by explicitly providing the required font flags argument for WoW Forever. No other UI or tracking changes.

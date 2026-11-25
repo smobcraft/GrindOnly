@@ -1,0 +1,1 @@
+Added XP / HOUR and SESSION XP under gold metrics. Expanded default height to 239px and resize range to 225-405px. Preserves tracking, scoring, history, mailbox fix and saved panel size.

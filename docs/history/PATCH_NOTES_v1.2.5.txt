@@ -1,0 +1,4 @@
+Grind Only v1.2.5
+- Fix transparent Mob Atlas window and invisible control backgrounds.
+- Use SetColorTexture like the existing working dashboard, instead of relying on a missing WHITE8X8 texture path.
+- Preserve mob search, map pins, loot, and expected value features.

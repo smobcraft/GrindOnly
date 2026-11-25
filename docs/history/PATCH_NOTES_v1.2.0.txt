@@ -1,0 +1,28 @@
+Grind Only 1.2.0 - ForeverDB Mob Atlas
+
+Requires separate ForeverDB addon by fatedfr: https://www.curseforge.com/wow/addons/forever-db
+
+/goatlas map - open the world map with ForeverDB mob spawn markers
+/goatlas wolf - search NPC names, click result for loot table
+/goatlas 1234 - open NPC by numeric ID
+/goatlas level 30 40 - filter map mobs to overlapping level ranges
+
+World map: "Grind Only mobs" checkbox toggles the map overlay.
+Click a marker for NPC loot and vendor-value expected gold per kill.
+
+Expected gold uses ForeverDB drop chance per 10000 and item vendor sell
+price from WoW's item cache, plus ForeverDB's observed average coin loot.
+Missing prices, unknown drop rates, unknown quantities and partial loot tables
+make the displayed EV a lower-bound estimate, NOT a guaranteed full EV.
+No auction-house values or skinning included. Loot tables may be incomplete.
+
+Map markers use ForeverDB's map-position (spm) records; other NPCs with only
+world-coordinate (spw) records are not shown by this first map integration.
+The map overlay is limited to 180 markers per map to avoid excessive UI work.
+Filter by name to locate a specific mob if a map is crowded.
+
+Existing analytics and SavedVariables are preserved. Fixes a forward-declared
+local scoping error in v1.1.0's mob observation functions.
+
+Untested in the actual WoW Forever client. Check map canvas and item-cache
+behavior in-game. No ForeverDB files are redistributed with this ZIP.

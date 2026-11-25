@@ -1,0 +1,1 @@
+Design B refinement: remove heading and minimap instructions, replace score bars with two clear color-coded text scores (Gold and XP/hr), reduce panel height from 220 to 180. Keep grade, session gold, gold/hour, and missing buffs. SavedVariables unchanged.

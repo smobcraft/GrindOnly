@@ -1,0 +1,1 @@
+Live rates and efficiency use timestamped rewards over up to 15 minutes, with a five-minute minimum for scoring. No duration penalty. EARLY indicates a partial window. Session totals and historical weighted median retained. Missing historical XP no longer falls back to gold. Current player level used for comparison.

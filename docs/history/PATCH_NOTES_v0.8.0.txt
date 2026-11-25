@@ -1,0 +1,1 @@
+v0.8.0: Spots ranking (gold/hr, kills/hr, confidence threshold); configurable missing buff catalog and active-aura custom tracking. /grindonly buffs or /grindonly spots. Existing SavedVariables preserved.\n

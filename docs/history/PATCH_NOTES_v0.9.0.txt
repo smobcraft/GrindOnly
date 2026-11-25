@@ -1,0 +1,1 @@
+Compact unified Design D: dashboard 480x306 (from 520x355), tightened toolbar, gold rows, efficiency banner/chart and footer chips. All widgets positioned within pane. Tracking logic and SavedVariables unchanged.
