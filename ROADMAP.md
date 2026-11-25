@@ -3,10 +3,10 @@
 | Phase | Deliverable | Exit gate |
 |---|---|---|
 | 00 Foundation | Audit, conservative cleanup, docs, baseline tests | Local package verified; publication blockers recorded |
-| 01 Repository | Private staging repo, license/asset approval, issue labels, branch protection, public conversion | Maintainer approves visibility and documentation |
+| 01 Repository | Repository readiness, license/asset approval, issue labels, branch protection, public conversion | Maintainer confirms source/asset rights, selects a license and approves visibility |
 | 02 CI/releases | PR checks, packaging, manually authorized releases, stable ZIP link | Tested release artifact and download |
-| 03 Discord | Feedback commands, issue creation, consent and status notifications | Valid submission creates one issue |
-| 04 AI worker | Isolated local Codex proof of concept, approved issue queue, draft PRs | Auth verified and approved task produces tested draft PR |
+| 03 Discord | Feedback commands, issue creation (including Discord-hosted image links), consent and status notifications | Mocked lifecycle tests pass; maintainer completes live verification |
+| 04 AI worker | Deferred: isolated worker, independently verified approval provenance, optional draft PRs | Separate authorization and safety review before implementation |
 | 05 Security | Least privilege, timeouts, logs, injection tests, kill switch | Unauthorized jobs fail closed |
 | 06 Integration | End-to-end feedback to release tests | Real request completes lifecycle |
 | 07 Public beta | In-game regression and v1.4.0 release | Players install and submit feedback |
@@ -25,8 +25,8 @@ Implementation is split into maintainer-approved slices:
 | 03B.2 | Duplicate detection and submission reliability | Concurrent/retried submissions are deduplicated and uncertain API results are disclosed |
 | 03B.3 | Maintainer authorization and approval integrity | Exact-ID authorization and content-revision approval records are tested fail closed |
 | 03B.4 | Release announcements and issue status notifications | Baseline, polling, pagination, rate-limit and delivery behavior is tested |
-| 03B.5 | Message context menu and screenshot support | Consent preview and only an approved durable attachment strategy are implemented |
-| 03B.6 | Operational reliability and Windows startup | Redacted logs, backoff, shutdown and single-instance behavior are tested; startup remains explicitly authorized |
-| 03B.7 | End-to-end validation and phase completion | Mocked end-to-end suite passes and maintainer live verification is documented |
+| 03B.5 | Message context menu and image links | Consent preview links supported Discord-hosted images; link expiry and public visibility are disclosed |
+| 03B.6 | Operational reliability and Windows startup | Redacted logs, bounded backoff, graceful shutdown, and single-instance behavior are tested; startup registration remains manual |
+| 03B.7 | End-to-end validation and phase completion | Mocked end-to-end suite passes; live checks and any remaining blockers are documented |
 
-Automated tests are required in every implementation slice. Slices 03B.1 through 03B.7 are not authorized yet. Phase 04 remains separately gated: it must independently verify immutable approval provenance and content integrity; a label alone is insufficient.
+Automated tests are required in every implementation slice. Phase 04 autonomous coding and PR creation are explicitly deferred and are not an exit criterion for Phase 03. The `ai-ready` label remains metadata only; any later worker must independently verify approval provenance and content integrity.

@@ -1,13 +1,27 @@
 # Discord feedback bot
-Use Python 3.11+ on Windows. In PowerShell from this directory:
+
+The bot is a maintainer-operated tool for collecting public GitHub issues. It does not run code or create pull requests automatically. Autonomous issue-to-PR work is deferred to a later phase.
+
+## Run the bot
+
+Use the already-created virtual environment from PowerShell in this directory:
 
 ```powershell
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-Copy-Item .env.example .env
-notepad .env
 .\.venv\Scripts\python.exe bot.py
 ```
-Set DISCORD_TOKEN to the bot token and GITHUB_TOKEN to a fine-grained token restricted to smobcraft/GrindOnly with Issues read/write and Metadata read. Never commit .env. Install the Discord app with bot and applications.commands scopes. Grant channel access. No privileged intents required. Commands are guild-scoped and checked against the configured channel. Try /help, /latest, then /suggest with a test request. Keep the terminal open. Feedback is public and untrusted; no automatic coding or approval occurs. Release announcements, deduplication, attachments, context menu and status notifications are future work. The bot does not yet post announcements.
 
-Phase 03B implementation proceeds in slices starting with 03B.0 documentation and mocked baseline tests. Only approved slices may add bot behavior. Maintainer authorization for later slices must use a configured exact Discord user ID and fail closed; display names and ordinary roles are never authorization evidence. Approval must bind to a deterministic issue-content revision hash, and Phase 04 must verify it independently. AI-ready labels are never execution authorization. Treat Discord/GitHub/attachment content as untrusted and never log credentials or raw sensitive content.
+Or run `start-bot.cmd`. The launcher uses the existing virtual environment, keeps the process in the bot directory, and does not register a Windows startup task. Do not create a new environment or install global dependencies for routine operation.
+
+The local `.env` must define `DISCORD_TOKEN`, `GITHUB_TOKEN`, `DISCORD_GUILD_ID`, and `DISCORD_FEEDBACK_CHANNEL_ID`. Use a fine-grained GitHub token restricted to `smobcraft/GrindOnly`, with only the permissions needed by the enabled commands. Never commit `.env` or share credential values. The bot needs the Discord `bot` and `applications.commands` scopes; privileged intents are not required. Commands are guild-scoped and restricted to the configured feedback channel.
+
+## Feedback and privacy
+
+Commands include `/bug`, `/suggest`, `/feedback`, `/latest`, `/status`, `/health`, and `/help`. A user can also right-click their own message in the configured channel and select **Submit my message as feedback**. The resulting modal is an editable public-issue preview; nothing is sent to GitHub until the user confirms.
+
+The context menu includes PNG, JPEG, GIF, and WebP image attachments as Markdown image links to Discord's CDN. These links are not copied to durable storage and may expire or stop working. Other attachment types are excluded. The issue is public, so submit only information and images that are safe to publish. The text/image preview is editable before submission.
+
+Issue text and attachments are untrusted input. The maintainer reviews issues manually. `/approve` records exact-ID maintainer approval for an issue revision and applies the `ai-ready` label, but does not start automated development or authorize an agent to create a PR. Any future Phase 04 worker must independently verify approval provenance and issue-content integrity.
+
+The bot stores submission deduplication, approvals, polling cursors, and notification state in a local SQLite database. The default is `data/grindonly-bot.sqlite3`; set `BOT_DATABASE_PATH` to override it. Keep the database local and back it up according to the maintainer's policy. Rotating logs are stored under `logs/`; configured credentials are redacted. Do not share logs or database files publicly.
+
+GitHub release and issue notifications are polled every `POLL_INTERVAL_SECONDS` (default 300) only after the GitHub API confirms that the repository is public. The initial poll is a silent baseline. Notifications are sent to `DISCORD_UPDATES_CHANNEL_ID` or the feedback channel fallback, and are limited to channels in the configured server. Delivery is at-least-once, so a process interruption can result in a duplicate message.

@@ -19,7 +19,7 @@ Track your gold and XP in real time, compare farming locations, discover mob dro
 ## Installation
 
 1. Close WoW Forever.
-2. Download [GrindOnly.zip from the latest release](https://github.com/smobcraft/GrindOnly/releases/latest/download/GrindOnly.zip) once the first stable release is published. For this repository snapshot, use the inner `GrindOnly` folder directly.
+2. Before a stable release is published, download the repository ZIP from GitHub and use the inner `GrindOnly` folder. After a stable release is published, use [GrindOnly.zip from the latest release](https://github.com/smobcraft/GrindOnly/releases/latest/download/GrindOnly.zip).
 3. Copy that folder into `World of Warcraft/_forever_/Interface/AddOns/` so `AddOns/GrindOnly/GrindOnly.toc` exists. Do not nest it twice.
 4. For database features, download [ForeverDB by Fatedfr](https://www.curseforge.com/wow/addons/forever-db) separately. Extract its supplied addon folders into the same AddOns directory; enable ForeverDB on the character selection AddOns screen. The inspected reference version is 2026.11.23.41. The core tracker does not require it.
 5. Restart WoW, enable Grind Only, log in and left-click the Grind Only coin icon on your minimap (or type `/wgf show`) to open the dashboard. Right-click the icon or type `/wgf stats` for analytics.
@@ -75,6 +75,8 @@ Explorer and predictive tooltip screenshots will be added when current captures 
 ## Commands
 
 `/wgf` and `/grindonly` are aliases. No argument toggles the dashboard. Subcommands: `show`, `hide`, `stats`, `buffs`, `spots`, `eff` (or `efficiency`), `mob <row number>`, `reset` (starts a new session, not a history wipe), `debug` (cast diagnostics).
+
+The separate Discord feedback bot accepts reports through commands and an own-message context menu with an editable preview. Supported image attachments are linked from Discord and may expire. `/approve <issue number>` records a content-revision approval and adds an `ai-ready` label; it does not authorize automated code execution. Autonomous issue-to-PR work is deferred. See [bot setup and security details](tools/discord-bot/README.md).
 
 `/goatlas` opens the atlas; `/goatlas <name>` searches; `/goatlas map` opens the map; `/goatlas level <min> <max>` filters map levels; `/goatlas tooltip on|off|toggle` controls notable loot; `/goatlas prediction on|off|detail|compact` controls forecasts; `/goatlas debug` prints database/map/hook diagnostics.
 
