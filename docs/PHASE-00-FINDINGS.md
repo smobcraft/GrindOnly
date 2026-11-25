@@ -6,4 +6,4 @@ Cleanup: archived original text notes outside installable addon; replaced unveri
 
 Privacy: package constructed from the addon ZIP only, not surrounding logs, screenshots or user data. No obvious credential literals found in targeted source search; this is not a comprehensive secret scan. No ForeverDB files bundled. At the time of this audit, Tactical asset provenance and license approval were publication blockers; the maintainer has since confirmed redistribution rights and selected GPL-3.0-only. The repository is now public, but no stable addon release has been published.
 
-Validation: see VALIDATION.md. In-game testing, migration fixtures, full compatibility and security review remain pending. Phase 01 repository setup and public visibility are complete; branch protection remains outstanding.
+Validation: see VALIDATION.md. In-game testing, migration fixtures, full compatibility and security review remain pending. Phase 01 repository setup and public visibility are complete; GitHub's rule requiring pull requests is confirmed by a rejected direct push, but its exact configuration remains to be reviewed.
