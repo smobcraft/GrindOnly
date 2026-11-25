@@ -2,7 +2,7 @@
 
 A local grinding analytics addon for **World of Warcraft: Forever**. Track earnings, experience, buffs and farming history, and explore potential farming targets using ForeverDB.
 
-**Baseline:** v1.3.19 (Phase 00 development snapshot; not yet a public release). Target client interface: 16001. English loot and buff messages are assumed.
+**Baseline:** v1.3.19 (Phase 00 development snapshot; no stable addon release has been published). Target client interface: 16001. English loot and buff messages are assumed.
 
 [Installation](#installation) · [Features](#features-and-how-to-use-them) · [Screenshots](#screenshots) · [Commands](#commands) · [Feedback](#feedback-and-development)
 
@@ -86,6 +86,6 @@ Gold is looted coin plus vendor sell value, not auction-house profit. Mailbox re
 
 ## Feedback and development
 
-Use [GitHub Issues](https://github.com/smobcraft/GrindOnly/issues) to report bugs or suggest improvements once the repository is accessible. Include addon/client versions, steps, expected and actual behavior, and sanitized Lua errors. The maintainer reports that the Phase 03A Discord feedback bot is running and the slash commands, issue creation and issue status lookup have been verified; this session has not performed live Discord or GitHub verification. See [CONTRIBUTING](CONTRIBUTING.md), [roadmap](ROADMAP.md), [architecture](docs/ARCHITECTURE.md), and [Phase 03B documentation](docs/phases/PHASE-03-DISCORD.md).
+Use [GitHub Issues](https://github.com/smobcraft/GrindOnly/issues) to report bugs or suggest improvements. Include addon/client versions, steps, expected and actual behavior, and sanitized Lua errors. The maintainer reports that the Phase 03A Discord feedback bot is running and the slash commands, issue creation and issue status lookup have been verified; this session did not live-test Discord bot commands or GitHub issue operations. See [CONTRIBUTING](CONTRIBUTING.md), [roadmap](ROADMAP.md), [architecture](docs/ARCHITECTURE.md), and [Phase 03B documentation](docs/phases/PHASE-03-DISCORD.md).
 
 All addon tracking is local to WoW SavedVariables; addon telemetry is not sent externally. The separate Discord bot is a maintainer-operated feedback workflow that explicitly posts public GitHub issues only after a user submits a feedback modal. ForeverDB is a separate project and is not bundled. This repository is licensed under GPL-3.0-only; the maintainer has confirmed rights to distribute the included source and Tactical textures. See [LICENSE](LICENSE).

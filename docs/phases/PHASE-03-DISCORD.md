@@ -2,12 +2,12 @@
 
 Objective and exit gate: Consent-based feedback to issues; deduplicate and notify.
 
-Status: Phase 03A implementation exists and the maintainer reports that Discord authorization, bot startup, slash commands, issue creation and issue status lookup were verified locally. Phases 03B.0 through 03B.7 implementation and mocked validation are complete. The final suite passes 65 tests. Live verification of the new health/image-submission behavior has not been performed. Phase 04 autonomous issue-to-PR work is deferred and is not required for Phase 03 completion.
+Status: Phase 03A implementation exists and the maintainer reports that Discord authorization, bot startup, slash commands, issue creation and issue status lookup were verified locally. Phases 03B.0 through 03B.7 implementation and mocked validation are complete. The final suite passes 65 tests. Live verification of the new health/image-submission behavior has not been performed. The repository is public, but no stable addon release has been published. Phase 04 autonomous issue-to-PR work is deferred and is not required for Phase 03 completion.
 
 ## Verification classes
 
 - **Maintainer-reported verification:** Discord application and authorization, server and feedback-channel configuration, local virtual environment and dependencies, local credential setup, bot startup, slash commands, issue creation and issue status lookup.
-- **Automated verification from this session:** existing source and a mocked Python test suite only. No live Discord or GitHub write was performed.
+- **Automated verification from this session:** existing source and a mocked Python test suite only. No live Discord bot interaction, GitHub issue write, approval, or notification was performed. Repository visibility was separately changed through GitHub settings after maintainer approval.
 - **Phase 02 maintainer report:** GitHub Actions validation and release workflows previously ran successfully. Hosted and live-workflow behavior still requires independent evidence before publication gates are considered cleared.
 
 ## Phase 03B sequence and acceptance criteria
@@ -21,7 +21,7 @@ Status: Phase 03A implementation exists and the maintainer reports that Discord 
 7. **03B.6 — Operations:** rotating redacted logs, bounded polling backoff, graceful shutdown, single-instance protection, health diagnostics, and a Windows launcher using the existing virtual environment. Startup-task registration is not performed.
 8. **03B.7 — Completion:** mocked end-to-end tests and maintainer-only live verification; do not make real test issues or external writes without approval.
 
-Slices 03B.1 through 03B.7 are implemented and covered by the final mocked suite. Phase 03B.5 uses Discord CDN image links under explicit maintainer direction; images remain publicly linked and may expire. The maintainer has deferred Phase 04 autonomous code/PR creation. No live Discord/GitHub writes have been performed.
+Slices 03B.1 through 03B.7 are implemented and covered by the final mocked suite. Phase 03B.5 uses Discord CDN image links under explicit maintainer direction; images remain publicly linked and may expire. The maintainer has deferred Phase 04 autonomous code/PR creation. No live Discord bot operation or GitHub issue write was performed.
 
 ## Outstanding decisions
 

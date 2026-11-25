@@ -1,6 +1,6 @@
 # Status
 
-Phase 00: local preparation completed with publication gates outstanding. Baseline v1.3.19; no release version bump. Repository setup, CI and release workflows are present in the live checkout. The maintainer confirms source and bundled Tactical texture redistribution rights and selected GPL-3.0-only. GitHub settings show no branch ruleset or classic branch-protection rule; in-game regression remains outstanding.
+Phase 00: local preparation completed. Baseline v1.3.19; no release version bump. Repository setup, CI and release workflows are present in the live checkout. The maintainer confirms source and bundled Tactical texture redistribution rights and selected GPL-3.0-only. The repository is now public, but no stable addon release has been published. A direct push to `master` was rejected by a repository rule requiring changes through a pull request; preserve that control. In-game regression remains outstanding.
 
 Phase 02: the GitHub Actions validation and release workflows are implemented. The maintainer reports that validation and release workflows have previously run successfully. Independent session verification of hosted workflows remains pending; no live workflow or release operation was performed for this status update.
 
@@ -22,6 +22,8 @@ Phase 03B.6: operational reliability is implemented: one-process locking, daily 
 
 Phase 03B.7: the mocked end-to-end lifecycle suite passed as part of 65 total automated tests. Phase 03B implementation is complete; live verification of new bot commands and image submission remains outstanding. Phase 04 autonomous issue-to-PR work is explicitly deferred by the maintainer and is not required for Phase 03 completion. Exact commands/results and environment gaps are in `docs/VALIDATION.md`.
 
-Public-readiness: GPL-3.0-only is recorded in `LICENSE`; the maintainer confirmed rights to distribute the source and bundled Tactical textures. The maintainer authorized changing repository visibility after Phase 03 implementation. `master` currently has no branch-protection rule or ruleset; add one before accepting unreviewed community changes. In-game regression remains outstanding. No release was published.
+Public-readiness: GPL-3.0-only is recorded in `LICENSE`; the maintainer confirmed rights to distribute the source and bundled Tactical textures. The maintainer authorized changing repository visibility after Phase 03 implementation. GitHub rejected direct updates to `master` with GH013 and stated changes must be made through a pull request. The exact rule configuration has not been inspected; do not bypass or weaken it. In-game regression remains outstanding. No release was published.
+
+Visibility update: GitHub settings now confirm `smobcraft/GrindOnly` is public. GitHub warned that Actions history/logs are public and push rulesets are disabled when a repository becomes public. A subsequent direct push to `master` was rejected by an active repository rule requiring a pull request, contradicting the earlier settings review; retain the rule and review its exact configuration before any future changes. This does not constitute a stable addon release or live bot verification.
 
 Do not interpret documented plans or labels as approval for execution. Maintainer approval for a future implementation slice is required before starting it.

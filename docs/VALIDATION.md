@@ -18,4 +18,4 @@ Required addon validation attempted: `C:\grindonly\tools\discord-bot\.venv\Scrip
 
 In-game verification gap: no live WoW Forever client was available; image preview/issue behavior has only been validated with mocked Discord/GitHub services. The bot must be restarted before the updated context-menu command and `/health` command become available.
 
-Public-readiness check: GitHub repository settings were inspected; no ruleset or classic branch-protection rule is configured for `master`. No security or automation settings were changed.
+Public visibility: after explicit maintainer approval, GitHub settings were used to make the repository public; the settings page confirmed the public state. GitHub warned that Actions history/logs become visible and push rulesets are disabled on public conversion. A subsequent `git push origin master` was rejected with GH013: `Changes must be made through a pull request.` This contradicts the earlier settings inspection; treat the repository rule as active and do not bypass it. No workflow, branch rule, or automation setting was changed. No addon release, live Discord bot operation, or GitHub issue write was performed.
