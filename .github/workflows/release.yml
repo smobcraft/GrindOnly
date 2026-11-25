@@ -1,5 +1,10 @@
 name: Publish release
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'GrindOnly/**'
   workflow_dispatch:
     inputs:
       version:
@@ -13,22 +18,77 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: stable-release
+  group: stable-release-${{ github.sha }}
   cancel-in-progress: false
 jobs:
   build:
-    if: github.ref == 'refs/heads/master' && github.actor == 'smobcraft' && inputs.confirm
+    if: >-
+      github.ref == 'refs/heads/master' &&
+      (
+        github.event_name == 'push' ||
+        (
+          github.event_name == 'workflow_dispatch' &&
+          github.actor == 'smobcraft' &&
+          inputs.confirm
+        )
+      )
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.release_version.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 0
+      - name: Determine release version
+        id: release_version
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_VERSION: ${{ inputs.version }}
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+
+          read_toc_version() {
+            local -a versions=()
+            mapfile -t versions < <(sed -nE 's/^## Version: ([0-9]+\.[0-9]+\.[0-9]+)$/\1/p' "$1")
+            if [[ "${#versions[@]}" -ne 1 ]]; then
+              echo "Expected exactly one numeric version in $1" >&2
+              return 1
+            fi
+            printf '%s' "${versions[0]}"
+          }
+
+          VERSION="$(read_toc_version GrindOnly/GrindOnly.toc)"
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            if [[ "$INPUT_VERSION" != "$VERSION" ]]; then
+              echo "Requested version must match GrindOnly.toc ($VERSION)" >&2
+              exit 1
+            fi
+          else
+            if [[ ! "$BEFORE_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+              echo "Could not identify the previous master revision; refusing to publish" >&2
+              exit 1
+            fi
+            git show "${BEFORE_SHA}:GrindOnly/GrindOnly.toc" > "$RUNNER_TEMP/previous.toc"
+            PREVIOUS_VERSION="$(read_toc_version "$RUNNER_TEMP/previous.toc")"
+            if [[ "$VERSION" == "$PREVIOUS_VERSION" ]]; then
+              echo "Addon changes require a new GrindOnly.toc version; refusing to publish" >&2
+              exit 1
+            fi
+            if [[ "$(printf '%s\n%s\n' "$PREVIOUS_VERSION" "$VERSION" | sort -V | head -n 1)" != "$PREVIOUS_VERSION" ]]; then
+              echo "GrindOnly.toc version must increase from $PREVIOUS_VERSION to $VERSION" >&2
+              exit 1
+            fi
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
       - run: sudo apt-get update && sudo apt-get install -y lua5.1
       - run: python3 tools/validate.py
       - run: lua5.1 tests/prediction.lua
       - run: python3 tools/package.py --version "$VERSION"
         env:
-          VERSION: ${{ inputs.version }}
+          VERSION: ${{ steps.release_version.outputs.version }}
       - uses: actions/upload-artifact@v4
         with:
           name: release-package
@@ -44,11 +104,29 @@ jobs:
         with:
           name: release-package
           path: dist
+      - name: Verify release tag is unused
+        env:
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ needs.build.outputs.version }}
+        run: |
+          set -euo pipefail
+          set +e
+          git ls-remote --exit-code --tags "https://github.com/${GH_REPO}.git" "refs/tags/v${VERSION}" > "$RUNNER_TEMP/tag-check.txt"
+          status=$?
+          set -e
+          if [[ "$status" -eq 0 ]]; then
+            echo "Release tag v${VERSION} already exists; refusing to publish" >&2
+            exit 1
+          elif [[ "$status" -ne 2 ]]; then
+            cat "$RUNNER_TEMP/tag-check.txt" >&2
+            echo "Unable to verify release tag availability; refusing to publish" >&2
+            exit 1
+          fi
       - name: Publish stable release
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          VERSION: ${{ inputs.version }}
+          VERSION: ${{ needs.build.outputs.version }}
           SHA: ${{ github.sha }}
         run: |
           [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || exit 1

@@ -4,7 +4,7 @@
 |---|---|---|
 | 00 Foundation | Audit, conservative cleanup, docs, baseline tests | Local package verified; publication blockers recorded |
 | 01 Repository | Repository readiness, issue labels, branch protection, public conversion | Repository is public and source/asset rights and license are confirmed; GitHub requires changes through a pull request, with exact rule configuration to review |
-| 02 CI/releases | PR checks, packaging, manually authorized releases, stable ZIP link | Tested release artifact and download |
+| 02 CI/releases | PR checks, packaging, and release publication on merged addon changes with a reviewed TOC version | Validation passes; release tag is new; artifact and download are verified |
 | 03 Discord | Feedback commands, issue creation (including Discord-hosted image links), consent and status notifications | Mocked lifecycle tests pass; maintainer completes live verification |
 | 04 AI worker | Deferred: isolated worker, independently verified approval provenance, optional draft PRs | Separate authorization and safety review before implementation |
 | 05 Security | Least privilege, timeouts, logs, injection tests, kill switch | Unauthorized jobs fail closed |
