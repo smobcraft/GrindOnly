@@ -17,3 +17,5 @@ Phase 03B.5–03B.7 final automated evidence: `C:\grindonly\tools\discord-bot\.v
 Required addon validation attempted: `C:\grindonly\tools\discord-bot\.venv\Scripts\python.exe tools\validate.py` — blocked with `Install Lua compiler (luac) before validation` (exit code 1). `texlua tests\prediction.lua` — not run because `texlua` is unavailable in this environment (PowerShell command-not-found, exit code 1). Lua was not installed globally.
 
 In-game verification gap: no live WoW Forever client was available; image preview/issue behavior has only been validated with mocked Discord/GitHub services. The bot must be restarted before the updated context-menu command and `/health` command become available.
+
+Public-readiness check: GitHub repository settings were inspected; no ruleset or classic branch-protection rule is configured for `master`. No security or automation settings were changed.

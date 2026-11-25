@@ -1,6 +1,6 @@
 # Status
 
-Phase 00: local preparation completed with publication gates outstanding. Baseline v1.3.19; no release version bump. Repository setup, CI and release workflows are present in the live checkout. The maintainer confirms source and bundled Tactical texture redistribution rights and selected GPL-3.0-only. Branch-protection review, public visibility and in-game regression remain outstanding.
+Phase 00: local preparation completed with publication gates outstanding. Baseline v1.3.19; no release version bump. Repository setup, CI and release workflows are present in the live checkout. The maintainer confirms source and bundled Tactical texture redistribution rights and selected GPL-3.0-only. GitHub settings show no branch ruleset or classic branch-protection rule; in-game regression remains outstanding.
 
 Phase 02: the GitHub Actions validation and release workflows are implemented. The maintainer reports that validation and release workflows have previously run successfully. Independent session verification of hosted workflows remains pending; no live workflow or release operation was performed for this status update.
 
@@ -22,6 +22,6 @@ Phase 03B.6: operational reliability is implemented: one-process locking, daily 
 
 Phase 03B.7: the mocked end-to-end lifecycle suite passed as part of 65 total automated tests. Phase 03B implementation is complete; live verification of new bot commands and image submission remains outstanding. Phase 04 autonomous issue-to-PR work is explicitly deferred by the maintainer and is not required for Phase 03 completion. Exact commands/results and environment gaps are in `docs/VALIDATION.md`.
 
-Public-readiness: GPL-3.0-only is recorded in `LICENSE`; the maintainer confirmed rights to distribute the source and bundled Tactical textures. The maintainer authorized changing repository visibility after Phase 03 implementation. Branch-protection settings and in-game regression remain unverified. No release was published.
+Public-readiness: GPL-3.0-only is recorded in `LICENSE`; the maintainer confirmed rights to distribute the source and bundled Tactical textures. The maintainer authorized changing repository visibility after Phase 03 implementation. `master` currently has no branch-protection rule or ruleset; add one before accepting unreviewed community changes. In-game regression remains outstanding. No release was published.
 
 Do not interpret documented plans or labels as approval for execution. Maintainer approval for a future implementation slice is required before starting it.
