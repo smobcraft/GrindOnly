@@ -4,13 +4,25 @@ A local grinding analytics addon for **World of Warcraft: Forever**. Track earni
 
 **Baseline:** v1.3.19 (Phase 00 development snapshot; not yet a public release). Target client interface: 16001. English loot and buff messages are assumed.
 
+[Installation](#installation) · [Features](#features-and-how-to-use-them) · [Screenshots](#screenshots) · [Commands](#commands) · [Feedback](#feedback-and-development)
+
+![Version](https://img.shields.io/badge/version-1.3.19-blue) ![Client](https://img.shields.io/badge/client-WoW%20Forever-gold) ![Status](https://img.shields.io/badge/status-development-orange)
+
+## Grind smarter
+
+Track your gold and XP in real time, compare farming locations, discover mob drops and keep your buffs active — all inside the game.
+
+![Live performance dashboard](docs/images/dashboard.png)
+
+*Live dashboard from an earlier development build. Left-click the minimap icon to toggle it.*
+
 ## Installation
 
 1. Close WoW Forever.
 2. Download the addon release ZIP (GitHub Releases will be configured in Phase 02). For this repository snapshot, use the inner `GrindOnly` folder directly.
 3. Copy that folder into `World of Warcraft/_forever_/Interface/AddOns/` so `AddOns/GrindOnly/GrindOnly.toc` exists. Do not nest it twice.
 4. For database features, download [ForeverDB by Fatedfr](https://www.curseforge.com/wow/addons/forever-db) separately. Extract its supplied addon folders into the same AddOns directory; enable ForeverDB on the character selection AddOns screen. The inspected reference version is 2026.11.23.41. The core tracker does not require it.
-5. Restart WoW, enable Grind Only, log in and type `/wgf show`. Right-click the coin minimap icon or type `/wgf stats` for analytics.
+5. Restart WoW, enable Grind Only, log in and left-click the Grind Only coin icon on your minimap (or type `/wgf show`) to open the dashboard. Right-click the icon or type `/wgf stats` for analytics.
 
 For upgrades, close the game and replace only the addon folder. Keep `WTF/Account/<account>/SavedVariables/GrindOnly.lua` and its backup. Never copy personal SavedVariables into this repository.
 
@@ -18,7 +30,7 @@ For upgrades, close the game and replace only the addon folder. Keep `WTF/Accoun
 
 | Feature | How to use |
 | --- | --- |
-| Live dashboard | `/wgf show`; drag/resize the panel. Rolling 15-minute gold and XP rates, session totals, buff status and efficiency. |
+| Live dashboard | Left-click the Grind Only minimap icon to toggle the dashboard, or type `/wgf show`; drag/resize the panel. Rolling 15-minute gold and XP rates, session totals, buff status and efficiency. |
 | Overview | `/wgf stats` → Overview for session history. |
 | Mobs | Stats → Mobs; select a row for observed kills, earnings and attributed drops. |
 | Loot | Stats → Loot; select an item for recorded sources; hover for native item tooltip. |
@@ -34,6 +46,32 @@ For upgrades, close the game and replace only the addon folder. Keep `WTF/Accoun
 | Notable loot | Hover a living NPC; native tooltip shows up to five selected drops when supported. |
 | Predictive grinding | Hover a living NPC; estimated gold/hr and XP/hr. `/goatlas prediction detail` reveals assumptions and per-kill rates. |
 
+## Screenshots
+
+These are actual in-game screenshots from development builds; the current interface may differ slightly.
+
+### Historical analytics
+
+Review lifetime earnings and compare recent sessions.
+
+![Historical earnings and session chart](docs/images/history.png)
+
+### Zone profitability
+
+Compare farming locations and drill down into subzones.
+
+![Zone profitability table](docs/images/zones.png)
+
+### Mob Atlas
+
+Search mobs and explore their known locations with ForeverDB.
+
+| Mob Atlas search | World map pins |
+| --- | --- |
+| ![Mob Atlas search panel](docs/images/mob-atlas.png) | ![Mob locations on the world map](docs/images/map-pins.png) |
+
+Explorer and predictive tooltip screenshots will be added when current captures are available.
+
 ## Commands
 
 `/wgf` and `/grindonly` are aliases. No argument toggles the dashboard. Subcommands: `show`, `hide`, `stats`, `buffs`, `spots`, `eff` (or `efficiency`), `mob <row number>`, `reset` (starts a new session, not a history wipe), `debug` (cast diagnostics).
@@ -46,6 +84,6 @@ Gold is looted coin plus vendor sell value, not auction-house profit. Mailbox re
 
 ## Feedback and development
 
-Use GitHub Issues once the repository is created. Include addon/client versions, steps, expected and actual behavior, and sanitized Lua errors. Discord integration and AI-assisted PRs are planned, not active. See [CONTRIBUTING](CONTRIBUTING.md), [roadmap](ROADMAP.md), and [architecture](docs/ARCHITECTURE.md).
+Use [GitHub Issues](https://github.com/smobcraft/GrindOnly/issues) to report bugs or suggest improvements once the repository is accessible. Include addon/client versions, steps, expected and actual behavior, and sanitized Lua errors. Discord integration and AI-assisted PRs are planned, not active. See [CONTRIBUTING](CONTRIBUTING.md), [roadmap](ROADMAP.md), and [architecture](docs/ARCHITECTURE.md).
 
 All tracking is local to WoW SavedVariables; this snapshot has no external feedback service or telemetry. ForeverDB is a separate project and is not bundled. Distribution license and remaining asset provenance must be approved before public publication; no open-source license is granted by this draft.
