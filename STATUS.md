@@ -2,7 +2,7 @@
 
 Phase 00: local preparation completed. Baseline v1.3.19; no release version bump. Repository setup, CI and release workflows are present in the live checkout. The maintainer confirms source and bundled Tactical texture redistribution rights and selected GPL-3.0-only. The repository is now public, but no stable addon release has been published. A direct push to `master` was rejected by a repository rule requiring changes through a pull request; preserve that control. In-game regression remains outstanding.
 
-Phase 02: the GitHub Actions validation and release workflows are implemented. The maintainer reports that validation and release workflows have previously run successfully. Independent session verification of hosted workflows remains pending; no live workflow or release operation was performed for this status update.
+Phase 02: the GitHub Actions validation and release workflows are implemented. The maintainer reports that validation and release workflows have previously run successfully. A local, unpushed workflow change now triggers release validation and publication on `master` when `GrindOnly/` files change; it requires a higher, manually updated TOC version and an unused release tag. The workflow has not been run or verified on GitHub with this change.
 
 Phase 03A: maintainer-verified locally: the Discord application was created and authorized, the server and feedback channel were configured, the Python virtual environment and dependencies were installed, Discord and GitHub credentials were configured locally, the bot successfully ran, slash commands worked, GitHub issue creation worked, and issue status lookup worked. These facts are maintainer-reported, not live verification performed during this session.
 
